@@ -21,13 +21,3 @@ To build the win32 solution with Visual Studio 2010:
 2. Manually zip NstDatabase.xml to the destination source/core/database/NstDatabase.zip
 3. Open projects/nestopia.sln
 4. Build in release mode
-
-## Linux/macOS Build
-!!! WARNING !!!
-Currently this build is being transitioned to using Nestopia JG with the QTea frontend:
-```
-https://gitlab.com/jgemu/nestopia
-https://gitlab.com/jgemu/qtea
-```
-
-Helper scripts and releases will be hosted here in the future. Stop worrying, everything will be fine by release time.
