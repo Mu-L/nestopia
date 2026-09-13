@@ -1,3 +1,30 @@
+This repository contains the sources required to build the legacy win32 release
+of Nestopia UE. Future work on Nestopia as a GUI-based project will be done
+on a cross-platform build that is the same on every platform, handled under
+the [Jolly Good Emulation](https://jgemu.gitlab.io) project. Releases are available
+here: [jgbuilds](https://github.com/jgemu/jgbuilds)
+
+## Cross-Platform build
+To build using the new system, clone the following repositories:
+https://gitlab.com/jgemu/nestopia
+https://gitlab.com/jgemu/qtea
+
+Build the Nestopia core:
+```
+cd nestopia
+make ENABLE_STATIC_JG=1 DISABLE_MODULE=1
+```
+
+Build the QTea frontend against the Nestopia core:
+```
+cd ..
+cd qtea
+mkdir nestopia
+cd nestopia
+cmake .. -DQTEA_CORE_DIR=/path/to/nestopia/nestopia
+make
+```
+
 ## About
 This project started as a fork of the original Nestopia source code, plus the
 Linux port. The purpose of the project is to make sure people who want
